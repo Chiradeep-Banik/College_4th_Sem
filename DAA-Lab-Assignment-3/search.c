@@ -29,11 +29,11 @@ int binarySearch(int *ar, int left, int right, int target)
         {
             if (ar[mid] > target)
             {
-                return binarySearch(ar, left, mid - 1, target);
+                binarySearch(ar, left, mid - 1, target);
             }
             else
             {
-                return binarySearch(ar, mid + 1, right, target);
+                binarySearch(ar, mid + 1, right, target);
             }
         }
     }
@@ -44,20 +44,19 @@ void main()
     int array[] = {1, 2, 3, 4, 5};
     if (linearSearch(array, 5, 5))
     {
-        printf("found\n");
+        printf("Found using linear search.\n");
     }
     else
     {
-        printf("not found\n");
+        printf("Not found using linear search.\n");
     }
 
-    if (binarySearch(array, 0, 4, 2))
+    if (binarySearch(array, 0, 4, 1))
     {
-        printf("found\n");
+        printf("Found using binary search.\n");
     }
     else
     {
-
-        printf("not found\n");
+        printf("Not found using binary search.\n");
     }
 }
