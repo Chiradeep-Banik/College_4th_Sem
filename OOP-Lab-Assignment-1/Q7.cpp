@@ -2,7 +2,7 @@
  * 7.By using array of object find the area of two rectangles.
  */
 #include <iostream>
-
+using namespace std;
 class rectangle
 {
 private:
@@ -12,10 +12,10 @@ private:
 public:
     void getData()
     {
-        std::cout << "Enter length : ";
-        std::cin >> length;
-        std::cout << "Enter breadth : ";
-        std::cin >> breadth;
+        cout << "Enter length : ";
+        cin >> length;
+        cout << "Enter breadth : ";
+        cin >> breadth;
     }
     int area()
     {
@@ -31,9 +31,9 @@ int main()
     {
         rectangles[i].getData();
     }
-    for (int i = 0; i < 2; i++)
+    for (int j = 0; j < 2; j++)
     {
-        std::cout << "Area: " << rectangles[i].area() << std::endl;
+        cout << "Area: " << rectangles[j].area() << endl;
     }
 
     return 0;

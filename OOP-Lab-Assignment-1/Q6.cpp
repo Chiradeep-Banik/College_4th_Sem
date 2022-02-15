@@ -2,33 +2,33 @@
  * 6.C++ program to create student class, read and print N student's details (Example of array of objects).
  */
 #include <iostream>
-
+using namespace std;
 class student
 {
 private:
-    std::string name;
+    string name;
     int sem;
 
 public:
     void get_details()
     {
-        std::cout << "Enter name : ";
-        std::cin >> name;
-        std::cout << "Enter semester : ";
-        std::cin >> sem;
+        cout << "Enter name : ";
+        cin >> name;
+        cout << "Enter semester : ";
+        cin >> sem;
     }
     void print_details()
     {
-        std::cout << "\nName: " << name << std::endl;
-        std::cout << "Semester: " << sem << std::endl;
+        cout << "\nName: " << name << endl;
+        cout << "Semester: " << sem << endl;
     }
 };
 
 int main()
 {
     int n;
-    std::cout << "Enter number of students : ";
-    std::cin >> n;
+    cout << "Enter number of students : ";
+    cin >> n;
 
     student students[n];
 
@@ -36,7 +36,7 @@ int main()
     {
         students[i].get_details();
     }
-    std::cout << "\nStudent Details:\n";
+    cout << "\nStudent Details:\n";
     for (int j = 0; j < n; j++)
     {
         students[j].print_details();

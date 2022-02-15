@@ -2,33 +2,33 @@
  * 3.C++ program to create class to get and print details of a student
  */
 #include <iostream>
-
+using namespace std;
 class student
 {
 public:
-    void get_details()
+    void getDetails()
     {
-        std::cout << "Enter name : ";
-        std::cin >> name;
-        std::cout << "Enter semester : ";
-        std::cin >> sem;
+        cout << "Enter name : ";
+        cin >> name;
+        cout << "Enter semester : ";
+        cin >> sem;
     }
-    void print_details()
+    void printDetails()
     {
-        std::cout << "\nName: " << name << std::endl;
-        std::cout << "Semester: " << sem << std::endl;
+        cout << "\nName: " << name << endl;
+        cout << "Semester: " << sem << endl;
     }
 
 private:
-    std::string name;
+    string name;
     int sem;
 };
 
 int main()
 {
     student *stu = new student();
-    stu->get_details();
-    stu->print_details();
+    stu->getDetails();
+    stu->printDetails();
 
     delete stu;
 

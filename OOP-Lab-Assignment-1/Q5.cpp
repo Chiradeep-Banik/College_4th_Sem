@@ -2,16 +2,16 @@
  * 5.Program to illustrate the working of objects and class in C++ Programming.
  */
 #include <iostream>
-
+using namespace std;
 class workingClass
 {
 private:
-    std::string name = "workingClass";
+    string name = "workingClass";
 
 public:
     void printName()
     {
-        std::cout << "I am a " << name << std::endl;
+        cout << "I am a " << name << endl;
     }
 };
 

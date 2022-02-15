@@ -9,7 +9,7 @@ public:
     std::string name = "SimpleClass";
     void printName()
     {
-        std::cout << "I am " << name << std::endl;
+        std::cout << "I am a " << name << std::endl;
     }
 };
 

@@ -3,12 +3,14 @@
  */
 #include <iostream>
 
+using namespace std;
+
 class Class
 {
 public:
     void hello()
     {
-        std::cout << "Hello" << std::endl;
+        cout << "Hello" << endl;
     }
 };
 
