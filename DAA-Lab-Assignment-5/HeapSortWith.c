@@ -1,6 +1,11 @@
-#include <iostream>
+#include <stdio.h>
 
-using namespace std;
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 void heapify(int arr[], int n, int i)
 {
@@ -16,7 +21,7 @@ void heapify(int arr[], int n, int i)
 
     if (largest != i)
     {
-        swap(arr[i], arr[largest]);
+        swap(&arr[i], &arr[largest]);
         heapify(arr, n, largest);
     }
 }
@@ -27,7 +32,7 @@ void heapSort(int arr[], int n)
         heapify(arr, n, i);
     for (int i = n - 1; i > 0; i--)
     {
-        swap(arr[0], arr[i]);
+        swap(&arr[0], &arr[i]);
         heapify(arr, i, 0);
     }
 }
@@ -38,7 +43,7 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
 
     heapSort(arr, n);
-    printf("Sorted array : ");
+
     for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
