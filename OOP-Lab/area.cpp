@@ -2,22 +2,27 @@
 
 #include <iostream>
 
+using namespace std;
+
 class circle
 {
 public:
+    int r;
     circle()
     {
-        int r;
-        std::cout << "Enter radius : ";
-        std::cin >> r;
-        double area = 3.14 * r * r;
-        std::cout << "Area : " << area << std::endl;
+        cout << "Enter radius : ";
+        cin >> r;
+    }
+    void area()
+    {
+        cout << "Area of circle : " << (22 * r * r) / 7 << endl;
     }
 };
 
 int main()
 {
     circle *c = new circle();
+    c->area();
     delete c;
 
     return 0;
