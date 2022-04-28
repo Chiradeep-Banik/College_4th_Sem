@@ -1,23 +1,28 @@
+// Bubble sort
+
 #include <iostream>
-
 using namespace std;
-
-int *bubbleSort(int arr[], int length)
-{
-    for (int i = 0; i < length; i++)
-    {
-        cout << arr[i] << endl;
-    }
-    return arr;
-}
-
 int main()
 {
-    int ar[] = {4, 2, 1, 3, 5};
-    int *sorted = bubbleSort(ar, size(ar));
-    for (int i = 0; i < size(ar); i++)
+    int i, j, temp;
+    int a[5] = {4, 1, 3, 2, 5};
+    for (i = 0; i < 5; i++)
     {
-        cout << sorted[i] << " ";
+        for (j = i + 1; j < 5; j++)
+        {
+            if (a[j] < a[i])
+            {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    cout << "Sorted Element List : ";
+    for (i = 0; i < 5; i++)
+    {
+        cout << a[i] << " ";
     }
     cout << endl;
+    return 0;
 }
